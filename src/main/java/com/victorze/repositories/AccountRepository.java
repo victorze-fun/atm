@@ -33,7 +33,6 @@ public class AccountRepository implements DepositMoneyGateway, WithdrawMoneyGate
                 .stream()
                 .filter(acc -> acc.getAccountNumber().equals(accountNumber))
                 .findFirst();
-
         return optionalAccount.orElse(null);
     }
 
