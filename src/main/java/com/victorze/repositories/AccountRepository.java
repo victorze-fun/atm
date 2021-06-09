@@ -27,6 +27,15 @@ public class AccountRepository implements DepositMoneyGateway {
         }
     }
 
+    public Account find(String accountNumber) {
+        var optionalAccount = data
+                .stream()
+                .filter(acc -> acc.getAccountNumber().equals(accountNumber))
+                .findFirst();
+
+        return optionalAccount.orElse(null);
+    }
+
     @PostConstruct
     public void init() {
         data.add(new Account("1234", 100));

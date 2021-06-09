@@ -1,12 +1,13 @@
 package com.victorze.usecases;
 
+import com.victorze.boundaries.DepositMoneyBoundary;
 import com.victorze.entities.Account;
 import com.victorze.usecases.gateways.DepositMoneyGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DepositMoney {
+public class DepositMoney implements DepositMoneyBoundary {
 
     @Autowired
     private DepositMoneyGateway gateway;
