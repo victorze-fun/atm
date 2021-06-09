@@ -25,9 +25,8 @@ public class ConsoleUI {
     @Autowired
     private WithdrawMoneyBoundary withdrawMoneyBoundary;
 
-    private Scanner reader;
+    private final Scanner reader;
     private String option;
-
     private User user;
 
     public ConsoleUI() {
@@ -36,14 +35,12 @@ public class ConsoleUI {
     }
 
     public void startApp() {
-        do {
-            if (loginCorrect()) {
-                System.out.println("Login correct!");
-                appLoop();
-            } else {
-                System.err.println("Login incorrect!");
-            }
-        } while (true);
+        if (loginCorrect()) {
+            System.out.println("Login correct!");
+            appLoop();
+        } else {
+            System.err.println("Login incorrect!");
+        }
     }
 
     private boolean loginCorrect() {
