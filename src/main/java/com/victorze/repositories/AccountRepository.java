@@ -2,6 +2,7 @@ package com.victorze.repositories;
 
 import com.victorze.entities.Account;
 import com.victorze.usecases.gateways.DepositMoneyGateway;
+import com.victorze.usecases.gateways.WithdrawMoneyGateway;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class AccountRepository implements DepositMoneyGateway {
+public class AccountRepository implements DepositMoneyGateway, WithdrawMoneyGateway {
 
     List<Account> data = new ArrayList<>();
 
