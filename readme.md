@@ -21,5 +21,5 @@ en el paquete `repositories`.
 * [Inversion of Control Containers and the Dependency Injection pattern](https://martinfowler.com/articles/injection.html),
   Martin Fowler
 
-* [https://martinfowler.com/bliki/InversionOfControl.html](https://martinfowler.com/bliki/InversionOfControl.html),
+* [Inversion of Control](https://martinfowler.com/bliki/InversionOfControl.html),
   Martin Fowler
