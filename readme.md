@@ -4,7 +4,7 @@ Esta aplicación es un ejemplo de una arquitectura limpia. Hace uso de un conten
 de inyección de dependencia (Spring Context). La lógica del negocio, el
 repositorio de datos y la interfaz de usuario (cli) están desacoplados.
 
-# Uso
+## Instrucciones
 
 Para probar la aplicación debe usar el usuario `qwerty` y la contraseña `secret`.
 Puede crear más usuarios y cuentas en los métodos `init` de las clases localizadas
