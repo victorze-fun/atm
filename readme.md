@@ -18,7 +18,7 @@ en el paquete `repositories`.
 * [A Little Architecture](https://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html),
   Robert C. Martin
   
-* [Inversión de contenedores de control y patrón de inyección de dependencia](https://martinfowler.com/articles/injection.html),
+* [Inversion of Control Containers and the Dependency Injection pattern](https://martinfowler.com/articles/injection.html),
   Martin Fowler
 
 * [https://martinfowler.com/bliki/InversionOfControl.html](https://martinfowler.com/bliki/InversionOfControl.html),
