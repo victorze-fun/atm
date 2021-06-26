@@ -1,4 +1,4 @@
-package com.victorze.entities;
+package com.victorze.atm.entities;
 
 import java.util.Objects;
 import java.util.StringJoiner;

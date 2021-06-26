@@ -1,6 +1,6 @@
-package com.victorze.boundaries;
+package com.victorze.atm.boundaries;
 
-import com.victorze.entities.Account;
+import com.victorze.atm.entities.Account;
 
 public interface WithdrawMoneyBoundary {
 

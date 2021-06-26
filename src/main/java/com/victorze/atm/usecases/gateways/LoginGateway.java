@@ -1,4 +1,4 @@
-package com.victorze.usecases.gateways;
+package com.victorze.atm.usecases.gateways;
 
 public interface LoginGateway {
 

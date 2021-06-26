@@ -1,4 +1,4 @@
-package com.victorze.boundaries;
+package com.victorze.atm.boundaries;
 
 public interface LoginBoundary {
 

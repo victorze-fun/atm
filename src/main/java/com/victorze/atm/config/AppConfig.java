@@ -1,4 +1,4 @@
-package com.victorze.config;
+package com.victorze.atm.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -1,8 +1,8 @@
-package com.victorze.usecases;
+package com.victorze.atm.usecases;
 
-import com.victorze.boundaries.WithdrawMoneyBoundary;
-import com.victorze.entities.Account;
-import com.victorze.usecases.gateways.WithdrawMoneyGateway;
+import com.victorze.atm.boundaries.WithdrawMoneyBoundary;
+import com.victorze.atm.entities.Account;
+import com.victorze.atm.usecases.gateways.WithdrawMoneyGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

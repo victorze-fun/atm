@@ -1,8 +1,8 @@
-package com.victorze.repositories;
+package com.victorze.atm.repositories;
 
-import com.victorze.entities.Account;
-import com.victorze.usecases.gateways.DepositMoneyGateway;
-import com.victorze.usecases.gateways.WithdrawMoneyGateway;
+import com.victorze.atm.entities.Account;
+import com.victorze.atm.usecases.gateways.DepositMoneyGateway;
+import com.victorze.atm.usecases.gateways.WithdrawMoneyGateway;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;

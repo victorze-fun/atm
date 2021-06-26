@@ -1,7 +1,7 @@
-package com.victorze.usecases;
+package com.victorze.atm.usecases;
 
-import com.victorze.boundaries.LoginBoundary;
-import com.victorze.usecases.gateways.LoginGateway;
+import com.victorze.atm.boundaries.LoginBoundary;
+import com.victorze.atm.usecases.gateways.LoginGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.victorze;
+package com.victorze.atm;
 
-import com.victorze.config.AppConfig;
+import com.victorze.atm.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {

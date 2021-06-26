@@ -1,8 +1,8 @@
-package com.victorze.repositories;
+package com.victorze.atm.repositories;
 
-import com.victorze.entities.User;
-import com.victorze.usecases.gateways.LoginGateway;
-import com.victorze.usecases.gateways.UserDetailGateway;
+import com.victorze.atm.entities.User;
+import com.victorze.atm.usecases.gateways.LoginGateway;
+import com.victorze.atm.usecases.gateways.UserDetailGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-# Cash Machine
+# Bank ATM
 
 Esta aplicación es un ejemplo de una arquitectura limpia. Hace uso de un contenedor
 de inyección de dependencia (Spring Context). La lógica del negocio, el
@@ -6,7 +6,7 @@ repositorio de datos y la interfaz de usuario (cli) están desacoplados.
 
 ## Instrucciones
 
-Para probar la aplicación debe usar el usuario `qwerty` y la contraseña `secret`.
+Para probar la aplicación debe ingresar el usuario `qwerty` y la contraseña `secret`.
 Puede crear más usuarios y cuentas en los métodos `init` de las clases localizadas
 en el paquete `repositories`.
 

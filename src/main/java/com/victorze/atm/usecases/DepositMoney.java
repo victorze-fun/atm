@@ -1,8 +1,8 @@
-package com.victorze.usecases;
+package com.victorze.atm.usecases;
 
-import com.victorze.boundaries.DepositMoneyBoundary;
-import com.victorze.entities.Account;
-import com.victorze.usecases.gateways.DepositMoneyGateway;
+import com.victorze.atm.boundaries.DepositMoneyBoundary;
+import com.victorze.atm.entities.Account;
+import com.victorze.atm.usecases.gateways.DepositMoneyGateway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

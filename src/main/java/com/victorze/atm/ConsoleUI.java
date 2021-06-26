@@ -1,10 +1,10 @@
-package com.victorze;
+package com.victorze.atm;
 
-import com.victorze.boundaries.DepositMoneyBoundary;
-import com.victorze.boundaries.LoginBoundary;
-import com.victorze.boundaries.UserDetailBoundary;
-import com.victorze.boundaries.WithdrawMoneyBoundary;
-import com.victorze.entities.User;
+import com.victorze.atm.boundaries.DepositMoneyBoundary;
+import com.victorze.atm.boundaries.LoginBoundary;
+import com.victorze.atm.boundaries.UserDetailBoundary;
+import com.victorze.atm.boundaries.WithdrawMoneyBoundary;
+import com.victorze.atm.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

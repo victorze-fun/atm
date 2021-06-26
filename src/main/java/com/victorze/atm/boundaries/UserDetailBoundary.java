@@ -1,6 +1,6 @@
-package com.victorze.boundaries;
+package com.victorze.atm.boundaries;
 
-import com.victorze.entities.User;
+import com.victorze.atm.entities.User;
 
 public interface UserDetailBoundary {
 
