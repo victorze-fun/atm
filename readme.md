@@ -1,14 +1,13 @@
 # Bank ATM
 
-Esta aplicación es un ejemplo de una arquitectura limpia. Hace uso de un contenedor
-de inyección de dependencia (Spring Context). La lógica del negocio, el
+Esta aplicación es un ejemplo de arquitectura limpia. Hace uso de un contenedor
+de inyección de dependencias (Spring Context). La lógica de negocio, el
 repositorio de datos y la interfaz de usuario (cli) están desacoplados.
 
-## Instrucciones
+## Uso
 
-Para probar la aplicación debe ingresar el usuario `qwerty` y la contraseña `secret`.
-Puede crear más usuarios y cuentas en los métodos `init` de las clases localizadas
-en el paquete `repositories`.
+Al probar la aplicación el sistema le pedirá un usuario y contraseña,
+por defecto estas son `qwerty` y `secret` respectivamente.
 
 ## Artículos relacionados
 
