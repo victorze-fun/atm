@@ -2,18 +2,17 @@ package com.victorze.atm.repositories;
 
 import com.victorze.atm.entities.User;
 import com.victorze.atm.usecases.interfaces.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
 public class UserRepositoryImpl implements UserRepository {
 
-    @Autowired
     private AccountRepositoryImpl accountRepository;
+
+    public UserRepositoryImpl(AccountRepositoryImpl accountRepository) {
+        this.accountRepository = accountRepository;
+    }
 
     private List<User> data = new ArrayList<>();
 
@@ -26,7 +25,6 @@ public class UserRepositoryImpl implements UserRepository {
         return optionalUser.orElse(null);
     }
 
-    @PostConstruct
     public void init() {
         var account = accountRepository.find("1234");
         data.add(new User("qwerty", "secret", "Elliot", account));

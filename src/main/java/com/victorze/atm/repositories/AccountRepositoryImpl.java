@@ -2,13 +2,10 @@ package com.victorze.atm.repositories;
 
 import com.victorze.atm.entities.Account;
 import com.victorze.atm.usecases.interfaces.repositories.AccountRepository;
-import org.springframework.stereotype.Repository;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
 public class AccountRepositoryImpl implements AccountRepository {
 
     List<Account> data = new ArrayList<>();
@@ -35,7 +32,6 @@ public class AccountRepositoryImpl implements AccountRepository {
         return optionalAccount.orElse(null);
     }
 
-    @PostConstruct
     public void init() {
         data.add(new Account("1234", 100));
     }

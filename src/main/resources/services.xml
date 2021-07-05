@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd"
+       >
+
+    <bean id="consoleUI" class="com.victorze.atm.ConsoleUI">
+        <constructor-arg name="loginBoundary" ref="login"/>
+        <constructor-arg name="depositMoneyBoundary" ref="depositMoney"/>
+        <constructor-arg name="userDetailBoundary" ref="userDetail"/>
+        <constructor-arg name="withdrawMoneyBoundary" ref="withdrawMoney"/>
+    </bean>
+
+    <bean id="depositMoney" class="com.victorze.atm.usecases.DepositMoney">
+        <constructor-arg name="accountRepository" ref="accountRepository"/>
+    </bean>
+
+    <bean id="login" class="com.victorze.atm.usecases.Login">
+        <constructor-arg name="userRepository" ref="userRepository"/>
+    </bean>
+
+    <bean id="userDetail" class="com.victorze.atm.usecases.UserDetail">
+        <constructor-arg name="userRepository" ref="userRepository"/>
+    </bean>
+
+    <bean id="withdrawMoney" class="com.victorze.atm.usecases.WithdrawMoney">
+        <constructor-arg name="accountRepository" ref="accountRepository"/>
+    </bean>
+
+    <bean id="userRepository" class="com.victorze.atm.repositories.UserRepositoryImpl" init-method="init">
+        <constructor-arg name="accountRepository" ref="accountRepository"/>
+    </bean>
+
+    <bean id="accountRepository" class="com.victorze.atm.repositories.AccountRepositoryImpl" init-method="init"/>
+
+</beans>

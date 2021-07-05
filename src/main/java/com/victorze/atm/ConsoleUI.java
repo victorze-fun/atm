@@ -5,33 +5,28 @@ import com.victorze.atm.boundaries.LoginBoundary;
 import com.victorze.atm.boundaries.UserDetailBoundary;
 import com.victorze.atm.boundaries.WithdrawMoneyBoundary;
 import com.victorze.atm.entities.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
-@Component
 public class ConsoleUI {
 
-    @Autowired
     private LoginBoundary loginBoundary;
 
-    @Autowired
     private UserDetailBoundary userDetailBoundary;
 
-    @Autowired
     private DepositMoneyBoundary depositMoneyBoundary;
 
-    @Autowired
     private WithdrawMoneyBoundary withdrawMoneyBoundary;
 
-    private final Scanner reader;
-    private String option;
+    private final Scanner reader = new Scanner(System.in);
+    private String option = "";
     private User user;
 
-    public ConsoleUI() {
-        reader = new Scanner(System.in);
-        option = "";
+    public ConsoleUI(LoginBoundary loginBoundary, UserDetailBoundary userDetailBoundary, DepositMoneyBoundary depositMoneyBoundary, WithdrawMoneyBoundary withdrawMoneyBoundary) {
+        this.loginBoundary = loginBoundary;
+        this.userDetailBoundary = userDetailBoundary;
+        this.depositMoneyBoundary = depositMoneyBoundary;
+        this.withdrawMoneyBoundary = withdrawMoneyBoundary;
     }
 
     public void startApp() {
@@ -113,7 +108,7 @@ public class ConsoleUI {
 
     private void seeAvailableDeposit() {
         user = userDetailBoundary.find(user.getUsername());
-        System.out.println("\nTotal deposit: " + user.getAccount().getBalance());
+        System.out.println("Total deposit: " + user.getAccount().getBalance());
     }
 
 }
