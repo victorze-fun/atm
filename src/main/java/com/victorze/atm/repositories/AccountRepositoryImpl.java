@@ -1,8 +1,7 @@
 package com.victorze.atm.repositories;
 
 import com.victorze.atm.entities.Account;
-import com.victorze.atm.usecases.gateways.DepositMoneyGateway;
-import com.victorze.atm.usecases.gateways.WithdrawMoneyGateway;
+import com.victorze.atm.usecases.interfaces.repositories.AccountRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class AccountRepository implements DepositMoneyGateway, WithdrawMoneyGateway {
+public class AccountRepositoryImpl implements AccountRepository {
 
     List<Account> data = new ArrayList<>();
 

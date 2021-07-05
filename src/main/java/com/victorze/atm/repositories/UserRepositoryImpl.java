@@ -1,8 +1,7 @@
 package com.victorze.atm.repositories;
 
 import com.victorze.atm.entities.User;
-import com.victorze.atm.usecases.gateways.LoginGateway;
-import com.victorze.atm.usecases.gateways.UserDetailGateway;
+import com.victorze.atm.usecases.interfaces.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -11,15 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class UserRepository implements UserDetailGateway, LoginGateway {
+public class UserRepositoryImpl implements UserRepository {
 
     @Autowired
-    private AccountRepository accountRepository;
+    private AccountRepositoryImpl accountRepository;
 
     private List<User> data = new ArrayList<>();
 
     @Override
-    public User find(String userName) {
+    public User get(String userName) {
         var optionalUser = data
                 .stream()
                 .filter(u -> u.getUsername().equals(userName))
@@ -27,19 +26,9 @@ public class UserRepository implements UserDetailGateway, LoginGateway {
         return optionalUser.orElse(null);
     }
 
-    @Override
-    public boolean checkUser(String userName, String password) {
-        var optionalUser = data
-                .stream()
-                .filter(u -> u.getUsername().equals(userName) && u.getPassword().equals(password))
-                .findFirst();
-        return optionalUser.isPresent();
-    }
-
     @PostConstruct
     public void init() {
         var account = accountRepository.find("1234");
         data.add(new User("qwerty", "secret", "Elliot", account));
     }
-
 }

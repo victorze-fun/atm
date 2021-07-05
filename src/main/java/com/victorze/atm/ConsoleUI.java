@@ -113,7 +113,7 @@ public class ConsoleUI {
 
     private void seeAvailableDeposit() {
         user = userDetailBoundary.find(user.getUsername());
-        System.out.println("Total deposit: " + user.getAccount().getBalance());
+        System.out.println("\nTotal deposit: " + user.getAccount().getBalance());
     }
 
 }

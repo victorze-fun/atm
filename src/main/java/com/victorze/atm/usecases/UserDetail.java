@@ -2,7 +2,7 @@ package com.victorze.atm.usecases;
 
 import com.victorze.atm.boundaries.UserDetailBoundary;
 import com.victorze.atm.entities.User;
-import com.victorze.atm.usecases.gateways.UserDetailGateway;
+import com.victorze.atm.usecases.interfaces.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 public class UserDetail implements UserDetailBoundary {
 
     @Autowired
-    UserDetailGateway gateway;
+    UserRepository userRepository;
 
     public User find(String userName) {
-        return gateway.find(userName);
+       return userRepository.get(userName);
     }
 
 }
