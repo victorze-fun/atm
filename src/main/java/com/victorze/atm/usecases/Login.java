@@ -1,6 +1,6 @@
 package com.victorze.atm.usecases;
 
-import com.victorze.atm.boundaries.LoginBoundary;
+import com.victorze.atm.usecases.interfaces.boundaries.LoginBoundary;
 import com.victorze.atm.usecases.interfaces.repositories.UserRepository;
 
 public class Login implements LoginBoundary {

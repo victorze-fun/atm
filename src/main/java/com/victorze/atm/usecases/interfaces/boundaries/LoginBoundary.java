@@ -1,4 +1,4 @@
-package com.victorze.atm.boundaries;
+package com.victorze.atm.usecases.interfaces.boundaries;
 
 public interface LoginBoundary {
 

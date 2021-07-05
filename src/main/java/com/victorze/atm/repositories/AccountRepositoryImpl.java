@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AccountRepositoryImpl implements AccountRepository {
 
-    List<Account> data = new ArrayList<>();
+    private List<Account> data = new ArrayList<>();
 
     @Override
     public void update(Account account) {

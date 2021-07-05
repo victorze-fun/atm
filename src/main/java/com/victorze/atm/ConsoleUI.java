@@ -1,9 +1,9 @@
 package com.victorze.atm;
 
-import com.victorze.atm.boundaries.DepositMoneyBoundary;
-import com.victorze.atm.boundaries.LoginBoundary;
-import com.victorze.atm.boundaries.UserDetailBoundary;
-import com.victorze.atm.boundaries.WithdrawMoneyBoundary;
+import com.victorze.atm.usecases.interfaces.boundaries.DepositMoneyBoundary;
+import com.victorze.atm.usecases.interfaces.boundaries.LoginBoundary;
+import com.victorze.atm.usecases.interfaces.boundaries.UserDetailBoundary;
+import com.victorze.atm.usecases.interfaces.boundaries.WithdrawMoneyBoundary;
 import com.victorze.atm.entities.User;
 
 import java.util.Scanner;
@@ -22,7 +22,10 @@ public class ConsoleUI {
     private String option = "";
     private User user;
 
-    public ConsoleUI(LoginBoundary loginBoundary, UserDetailBoundary userDetailBoundary, DepositMoneyBoundary depositMoneyBoundary, WithdrawMoneyBoundary withdrawMoneyBoundary) {
+    public ConsoleUI(LoginBoundary loginBoundary,
+                     UserDetailBoundary userDetailBoundary,
+                     DepositMoneyBoundary depositMoneyBoundary,
+                     WithdrawMoneyBoundary withdrawMoneyBoundary) {
         this.loginBoundary = loginBoundary;
         this.userDetailBoundary = userDetailBoundary;
         this.depositMoneyBoundary = depositMoneyBoundary;

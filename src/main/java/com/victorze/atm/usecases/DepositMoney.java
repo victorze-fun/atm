@@ -1,6 +1,6 @@
 package com.victorze.atm.usecases;
 
-import com.victorze.atm.boundaries.DepositMoneyBoundary;
+import com.victorze.atm.usecases.interfaces.boundaries.DepositMoneyBoundary;
 import com.victorze.atm.entities.Account;
 import com.victorze.atm.usecases.interfaces.repositories.AccountRepository;
 
